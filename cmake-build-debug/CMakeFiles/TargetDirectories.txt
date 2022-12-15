@@ -1,4 +1,0 @@
-/home/alex_pyslar/project/mai-k304-cpp-sem-3/kr-1-data-organization/cmake-build-debug/CMakeFiles/list.dir
-/home/alex_pyslar/project/mai-k304-cpp-sem-3/kr-1-data-organization/cmake-build-debug/CMakeFiles/kr-1-data-organization.dir
-/home/alex_pyslar/project/mai-k304-cpp-sem-3/kr-1-data-organization/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alex_pyslar/project/mai-k304-cpp-sem-3/kr-1-data-organization/cmake-build-debug/CMakeFiles/rebuild_cache.dir

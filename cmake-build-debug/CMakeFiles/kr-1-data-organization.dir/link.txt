@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/kr-1-data-organization.dir/src/main.cpp.o -o kr-1-data-organization  liblist.a 
