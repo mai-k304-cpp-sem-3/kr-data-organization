@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -179,9 +178,7 @@ void addPage(List* start, int num) {
 	New->next = current->next;
 	New->back = current->back;
 	current->next = New;
-	current->back = 
 }
-
 
 void deletePage(List* start, int position) {
 	int i = 0;

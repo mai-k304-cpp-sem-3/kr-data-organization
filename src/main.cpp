@@ -1,24 +1,25 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
-#include "list.h"
+#include "examination.h"
+#include "professor.h"
+//#include "group.h"
 
 using namespace std;
 
-const char f_name[] = "input.txt";
+const char EXAMINATIONS_FILE_NAME[] = "examinations.txt";
+const char PROFESSOR_FILE_NAME[] = "professors.txt";
+const char GROUP_FILE_NAME[] = "groups.txt";
 
 int main()
 {
-	List* start = new List;
-	List* answer;
+	examination* examinations = new examination;
 
-	fileReadList(start, f_name);
-	printConsole(start);
-	answer = findName(start, "door1");
+	fileReadExamination(examinations, EXAMINATIONS_FILE_NAME);
+	printConsoleExamination(examinations);
 
-	printConsole(answer);
+	professor* professors = new professor;
 
-	printConsole(start);
-	
+	fileReadProfessor(professors, PROFESSOR_FILE_NAME);
+	printConsoleProfessor(professors);
 }
