@@ -10,7 +10,6 @@ struct examination { // Структура экзамена
     examination* back; // Преведущий элемент списка
     examination* next; // Следующий элемент списка
     string name; // Название предмета
-    int professorId; // Преподователь
 };
 
 void copyDataExamination(examination* from, examination* to); // Метод перемещения информации между элементами
@@ -29,7 +28,6 @@ examination* givePageExamination(examination* start, int position); // Взят�
 
 void setIdExamination(examination* start, int position, int _id);
 void setNameExamination(examination* start, int position, string _name);
-void setProfessorIdExamination(examination* start, int position, string _professorId);
 
 examination* findIdExamination(examination* start, int key);
 examination* findNameExamination(examination* start, string key);

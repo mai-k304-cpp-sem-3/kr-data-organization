@@ -9,7 +9,6 @@ using namespace std;
 void copyDataProfessor(professor* from, professor* to) { // Метод перемещения информации между элементами
     to->id = from->id;
 	to->name = from->name;
-    to->examinationId = from->examinationId;
 }
 
 // Методы добавление и удаления элементов списка
@@ -56,7 +55,6 @@ void deleteListProfessor(professor* start) { // Удаление списка
 // Методы отображение и сохранения списка
 const int idLenght = 6;
 const int nameLenght = 15;
-const int examinationIdLenght = 12;
 
 const char horizontalLine = '-';
 const char verticalLine = '|';
@@ -66,37 +64,32 @@ const char space = ' ';
 void printConsoleProfessor(professor* start) { // Отображение списка в консоли
 	professor* current = start;
 
-	cout << setfill(horizontalLine)     << corner
-		 << setw(idLenght + 1)          << corner
-         << setw(nameLenght + 1)        << corner
-		 << setw(examinationIdLenght + 1) << corner << endl;
+	cout << setfill(horizontalLine) << corner
+		 << setw(idLenght + 1)      << corner
+         << setw(nameLenght + 1)    << corner << endl;
 
 	cout << setfill(space)
-		<< verticalLine << setw(idLenght)          << "id"   << right
-		<< verticalLine << setw(nameLenght)        << "name" << right
-        << verticalLine << setw(examinationIdLenght) << "examinationId" << right
+		<< verticalLine << setw(idLenght)   << "id"   << right
+		<< verticalLine << setw(nameLenght) << "name" << right
 		<< verticalLine << endl;
 
 	do {
-		cout << setfill(horizontalLine)     << corner
-			 << setw(idLenght + 1)          << corner
-			 << setw(nameLenght + 1)        << corner
-		     << setw(examinationIdLenght + 1) << corner << endl;
+		cout << setfill(horizontalLine) << corner
+			 << setw(idLenght + 1)      << corner
+			 << setw(nameLenght + 1)    << corner << endl;
 
 		cout <<setfill(space) 
-			 << verticalLine << setw(idLenght)          << current->id          << right
-			 << verticalLine << setw(nameLenght)        << current->name        << right
-             << verticalLine << setw(examinationIdLenght) << current->examinationId << right
+			 << verticalLine << setw(idLenght)   << current->id   << right
+			 << verticalLine << setw(nameLenght) << current->name << right
 			 << verticalLine << endl;
 
 		current = current->next;
 
 	} while (current != start);
 
-	cout << setfill(horizontalLine)     << corner
-		 << setw(idLenght + 1)          << corner
-		 << setw(nameLenght + 1)        << corner
-         << setw(examinationIdLenght + 1) << corner << endl;
+	cout << setfill(horizontalLine) << corner
+		 << setw(idLenght + 1)      << corner
+		 << setw(nameLenght + 1)    << corner << endl;
 	cout << endl;
 }
 void fileReadProfessor(professor* start, const char* fileName) { // Считывания списка из файла
@@ -108,7 +101,6 @@ void fileReadProfessor(professor* start, const char* fileName) { // Считыв
 	while (!ifs.eof()) {
 		current->id = i;
 		ifs >> current->name;
-        ifs >> current->examinationId;
 
 		if (!ifs.eof()) {
 			addPageProfessor(start, i++);
@@ -132,7 +124,6 @@ void fileComplementProfessor(professor* start, const char* fileName) { // Зап
 	while (!ifs.eof()) {
 		current->id = i;
 		ifs >> current->name;
-        ifs >> current->examinationId;
 		if (!ifs.eof()) {
 			addPageProfessor(start, i++);
 			current = current->next;
@@ -171,16 +162,6 @@ void setNameProfessor(professor* start, int position, string _name) {
 		current = current->next;
 	}
 	current->name = _name;
-}
-
-void setExaminationIdProfessor(professor* start, int position, string _examinationId) {
-	professor* current = start;
-	int i = 0;
-
-	while ((current->next != start) && (i < position)) {
-		current = current->next;
-	}
-	current->name = _examinationId;
 }
 
 professor* findIdProfessor(professor* start, int key) {

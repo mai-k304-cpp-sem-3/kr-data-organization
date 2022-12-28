@@ -8,6 +8,7 @@ set(SOURCE_EXE src/main.cpp) # Установка переменной со сп
 
 set(SOURCE_LIB src/examination.cpp
                src/professor.cpp
+               src/group.cpp
 ) # Установка переменной со списком исходников для библиотеки
 
 add_library(lib STATIC ${SOURCE_LIB}) # Создание статической библиотеки

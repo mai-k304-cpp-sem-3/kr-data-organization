@@ -10,7 +10,6 @@ struct professor { // Структура проеподователя
     professor* back; // Преведущий элемент списка
     professor* next; // Следующий элемент списка
     string name; // ФИО преподователя
-    int examinationId; // Экзамен
 };
 
 void copyDataProfessor(professor* from, professor* to); // Метод перемещения информации между элементами
@@ -29,7 +28,6 @@ professor* givePageProfessor(professor* start, int position); // Взятие э
 
 void setIdProfessor(professor* start, int position, int _id);
 void setNameProfessor(professor* start, int position, string _name);
-void setExaminationIdProfessor(professor* start, int position, string _examinationId);
 
 professor* findIdProfessor(professor* start, int key);
 professor* findNameProfessor(professor* start, string key);
